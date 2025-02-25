@@ -17,7 +17,7 @@ function Navbar() {
                     </div>
 
                     <div className='flex items-center gap-2'>
-                        <input type="text" placeholder='Buscar...' className='bg-sky-700 px-2 py-1 rounded-sm text-sm outline-none'/>
+                        <input type="text" placeholder='Buscar...' className='bg-sky-700 px-2 py-1 rounded-sm text-sm outline-none w-120'/>
                         <Search className='size-5 cursor-pointer hover:scale-110 hover:text-red-400'/> 
                     </div>
                     

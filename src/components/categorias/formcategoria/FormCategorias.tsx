@@ -65,6 +65,10 @@ function FormCategoria() {
             </h1>
             <form className="flex flex-col w-1/2 gap-4" onSubmit={gerarNovaCategoria}>
                 <div className="flex flex-col gap-2">
+                    <div className="flex gap-1 items-center justify-center">
+                        <img className="w-50 h-50 rounded-sm" src="https://i.pinimg.com/736x/c0/33/03/c033035a6830df525279e5767c15fbf9.jpg" alt="" />
+                        <img className="w-50 h-50 rounded-sm" src="https://i.pinimg.com/736x/da/32/21/da3221667addaeff8c73e74d9b002e01.jpg" alt="" />
+                    </div>
                     <label htmlFor="nome">Nome da Categoria</label>
                     <input
                         type="text"
@@ -77,7 +81,7 @@ function FormCategoria() {
                     />
                 </div>
                 <button
-                    className="rounded text-zinc-100 bg-zinc-400 text-xl cursor-pointer hover:bg-zinc-800 w-1/2 py-2 mx-auto flex justify-center"
+                    className="rounded text-zinc-100 bg-sky-400 text-xl cursor-pointer hover:bg-sky-800 w-1/2 py-2 mx-auto flex justify-center my-5"
                     type="submit"
                     disabled={isLoading}
                 >
