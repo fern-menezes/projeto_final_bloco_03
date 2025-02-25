@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { Tag} from 'lucide-react'
+import { Tag, Edit, Trash } from 'lucide-react'
 import Categoria from '../../../models/Categoria'
 
 
@@ -22,19 +22,19 @@ function CardCategorias({ categoria }: CardCategoriasProps) {
                     <p className='text-xl p-4'>{categoria.nome}</p>
                 </div>
 
-                <div className="flex">
-                    <Link to={`/editarcategoria/${categoria.id} `} 
-                        className='w-full text-white bg-sky-500 hover:bg-sky-700 
-                        flex items-center justify-center py-2'>
-                        <button>Editar</button>
+                <div className="flex items-center justify-center text-white bg-sky-700 py-2 gap-2 ">
+                    <Link to={`/editarcategoria/${categoria.id} `} >
+                        <button>
+                            <Edit className='size-5 cursor-pointer hover:scale-110 hover:text-sky-500'/>
+                        </button>
                     </Link>
 
-                    <Link to={`/deletarcategoria/${categoria.id} `} 
-                        className='w-full text-zinc-100 bg-red-600 hover:bg-red-700 
-                        flex items-center justify-center py-2'>
-                        <button>Deletar</button>
+                    <Link to={`/deletarcategoria/${categoria.id} `} >
+                        <button>
+                            <Trash className='size-5 cursor-pointer hover:scale-110 hover:text-sky-500'/>
+                        </button>
                     </Link>
-            </div>
+                </div>
 
         </div>
     )

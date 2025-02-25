@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import Categoria from "../../../models/Categoria";
-import { buscar } from "../../../services/Service";
+import { listar } from "../../../services/Service";
 import CardCategorias from "../cardcategorias/CardCategorias";
 import { RotatingLines } from "react-loader-spinner";
 
@@ -11,8 +11,7 @@ function ListaCategorias() {
 
     async function buscarCategorias() {
         try {
-            await buscar('/categorias', setCategorias, {
-            });
+            await listar('/categorias', setCategorias,);
         } catch (error: any) {
             if (error.toString().includes('403')) {
             }

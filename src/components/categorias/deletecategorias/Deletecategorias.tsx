@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import Categoria from "../../../models/Categoria";
-import { buscar, deletar } from "../../../services/Service";
+import { deletar, listar } from "../../../services/Service";
 import { RotatingLines } from "react-loader-spinner";
 import { Tag, Trash2 } from "lucide-react";
 
@@ -14,8 +14,7 @@ function DeletarCategoria() {
 
     async function buscarPorId(id: string) {
         try {
-            await buscar(`/categorias/${id}`, setCategoria, {
-            })
+            await listar(`/categorias/${id}`, setCategoria,)
         } catch (error: any) {
             if (error.toString().includes('403')) {
             }
@@ -32,8 +31,7 @@ function DeletarCategoria() {
         setIsLoading(true)
 
         try {
-            await deletar(`/categorias/${id}`, {
-            })
+            await deletar(`/categorias/${id}`,)
 
             alert('Categoria deletada com sucesso!')
 
