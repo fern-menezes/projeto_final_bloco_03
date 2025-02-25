@@ -1,5 +1,6 @@
 
 function Home() {
+    
     return (
         <>
             <div className="bg-sky-50 flex justify-center">

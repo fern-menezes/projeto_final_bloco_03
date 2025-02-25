@@ -1,4 +1,5 @@
 import { Search, ShoppingCart, User, Zap } from "lucide-react"
+import { Link } from "react-router-dom"
 
 function Navbar() {
     return (
@@ -9,7 +10,10 @@ function Navbar() {
                 <div className="container flex justify-between text-lg px-5 gap-5">
 
                     <div className='flex items-center gap-2'>
-                        <Zap /> FARMACATCHAU
+                        <Zap />
+                        <Link to='/' > 
+                            FARMACATCHAU 
+                        </Link>   
                     </div>
 
                     <div className='flex items-center gap-2'>
@@ -19,21 +23,15 @@ function Navbar() {
                     
                     <div className='flex gap-2'>
                     <div className="flex items-center gap-4 py-4">
-						<p>
-							Produtos
-						</p>
-						<p>
-							Categorias
-						</p>
-						<p>
-							Cadastrar Categoria
-						</p>
-							<User className="size-8"
-							/>
-
-							<ShoppingCart
-								className="size-8"
-							/>
+                    <Link to='/produtos' className='hover:underline'>Produtos</Link>
+                        <Link to='/categorias' className='hover:underline'>Categorias</Link>
+                        <Link to='/cadastrarcategoria' className='hover:underline'>Nova Categoria</Link>
+                        <p>
+                            <User className='size-5 cursor-pointer   hover:text-sky-600 hover:animate-wiggle'/>
+                        </p>
+                        <p>
+                            <ShoppingCart className='size-5 cursor-pointer hover:scale-110 hover:text-sky-600 hover:animate-wiggle'/>
+                        </p>
 					</div>
                     </div>
                 </div>
