@@ -68,6 +68,8 @@ function FormCategoria() {
                     <div className="flex gap-1 items-center justify-center">
                         <img className="w-50 h-50 rounded-sm" src="https://i.pinimg.com/736x/c0/33/03/c033035a6830df525279e5767c15fbf9.jpg" alt="" />
                         <img className="w-50 h-50 rounded-sm" src="https://i.pinimg.com/736x/da/32/21/da3221667addaeff8c73e74d9b002e01.jpg" alt="" />
+                        <img className="w-50 h-50 rounded-sm" src="https://i.pinimg.com/736x/e6/fa/c7/e6fac7387ceb56ebd354a3eb76e7f085.jpg" alt="" />
+
                     </div>
                     <label htmlFor="nome">Nome da Categoria</label>
                     <input

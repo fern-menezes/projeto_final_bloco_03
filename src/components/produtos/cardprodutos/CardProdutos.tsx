@@ -9,7 +9,7 @@ interface CardProdutosprops {
 function CardProduto({ produto }: CardProdutosprops) {
     return (
         <div className='border-zinc-300 border 
-            flex flex-col rounded-sm overflow-hidden justify-between m-4 transition duration-200 hover:bg-zinc-200 hover:scale-102 hover:border-sky-700'>
+            flex flex-col rounded-sm overflow-hidden justify-between m-4 transition duration-200 hover:bg-sky-50 hover:scale-102 hover:border-sky-700'>
                 
             <div>
                 <div className="flex justify-end w-full py-2 px-4 gap-4 border-b border-zinc-300">
@@ -31,8 +31,8 @@ function CardProduto({ produto }: CardProdutosprops) {
                 </div>
             </div>
             <div className="flex">
-            <Link to={`/editarproduto/${produto.id}`} className='w-full text-white text-lg bg-zinc-500 
-                    hover:bg-zinc-800 flex items-center justify-center py-2 cursor-pointer'>
+            <Link to={`/editarproduto/${produto.id}`} className='w-full text-white text-lg bg-sky-500 
+                    hover:bg-sky-800 flex items-center justify-center py-2 cursor-pointer'>
                     <button>Comprar</button>
                 </Link>
 

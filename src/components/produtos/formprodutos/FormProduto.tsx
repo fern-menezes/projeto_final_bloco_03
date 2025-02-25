@@ -149,7 +149,7 @@ function FormProduto() {
                     </select>
                 </div>
                 <button
-                    className="rounded text-zinc-100 bg-zinc-400 text-xl cursor-pointer hover:bg-zinc-800 w-1/2 py-2 mx-auto flex justify-center"
+                    className="rounded text-zinc-100 bg-sky-400 text-xl cursor-pointer hover:bg-sky-800 w-1/2 py-2 mx-auto my-8 flex justify-center"
                     type="submit"
                     disabled={carregandoCategoria}>
                     {isLoading ? 
