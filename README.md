@@ -1,50 +1,140 @@
-# React + TypeScript + Vite
+![Home-farmacia](https://github.com/fern-menezes/projeto_final_bloco_03/blob/main/public/home.png)
+# 📌 Sistema de Farmácia com React, TypeScript, Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este projeto é um sistema de farmácia desenvolvido com **React**, **TypeScript** e **Vite**.
+O foco dessa aplicação é navegar no menu, cadastrar categorias e produtos, e edita-los e deletar-los.
 
-Currently, two official plugins are available:
+## 🚀 Tecnologias Utilizadas
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- ⚛ **React**: Biblioteca JavaScript para construção de interfaces de usuário.
+- 🦕 **TypeScript**: Superset do JavaScript que adiciona tipos estáticos.
+- ⚡ **Vite**: Ferramenta de construção rápida e leve para projetos front-end.
+- ⚛️ **React Router DOM**: Biblioteca de roteamento para React.
+- 🎨 **Tailwind CSS**: Framework utilitário de CSS para estilização.
+- 🪄 **Swagger**: Comunicação com a API hospedada no swagger para realização e interação com o CRUD.
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## 📂 Estrutura do Projeto
 
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+```plaintext
+src/
+├── components/
+│   ├── navbar/
+│   │   └── Navbar.tsx
+│   ├── produtos/
+│   │   ├── cardprodutos/
+│   │   │   └── CardProdutos.tsx
+│   │   ├── deletarprodutos/
+│   │   │   └── DeletarProdutos.tsx
+│   │   ├── formprodutos/
+│   │   │   └── FormProdutos.tsx
+│   │   └── listaprodutos/
+│   │       └── ListaProdutos.tsx
+│   ├── categorias/
+│   │   ├── cardcategorias/
+│   │   │   └── CardCategorias.tsx
+│   │   ├── deletarcategorias/
+│   │   │   └── DeletarCategorias.tsx
+│   │   ├── formcategorias/
+│   │   │   └── FormCategorias.tsx
+│   │   └── listacategorias/
+│   │       └── ListaCategorias.tsx
+├── pages/
+│   ├── home/
+│   │   └── Home.tsx
+│   ├── login/
+│   │   └── Login.tsx
+│   └── perfil/
+│       └── Perfil.tsx
+├── App.tsx
+├── index.tsx
+└── tailwind.config.js
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+---
+
+## 🛠 Instalação
+
+Clone o repositório:
+
+```sh
+git clone https://github.com/fern-menezes/farmacia-react.git
+```
+
+Navegue até o diretório do projeto:
+
+```sh
+cd farmacia-react
+```
+
+Instale as dependências:
+
+```sh
+yarn install
+```
+
+---
+
+## ⚙️ Configuração
+
+### **TypeScript**
+Certifique-se de que o arquivo **tsconfig.json** está corretamente configurado para incluir os caminhos e módulos necessários.
+
+### **Vite**
+No arquivo **vite.config.js**, configure os aliases de caminho:
 
 ```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
+import tailwindcss from "@tailwindcss/vite"
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
+// https://vite.dev/config/
+export default defineConfig({
+  plugins: [react(), tailwindcss()],
 })
+
 ```
+
+---
+
+## 🎯 Desenvolvimento
+
+Para iniciar o servidor de desenvolvimento:
+
+```sh
+yarn dev
+```
+
+### 📦 Build
+
+Para criar a build de produção:
+
+```sh
+yarn build
+```
+---
+
+## 💡 Contribuição
+
+Se quiser contribuir com o projeto, siga os seguintes passos:
+
+1. 🍴 **Faça um fork do projeto**
+2. 🌿 Crie uma nova branch:
+   ```sh
+   git checkout -b feature/nova-funcionalidade
+   ```
+3. 📝 Commit suas mudanças:
+   ```sh
+   git commit -m 'Adiciona nova funcionalidade'
+   ```
+4. 🚀 Faça push para a branch:
+   ```sh
+   git push origin feature/nova-funcionalidade
+   ```
+5. 🔄 Abra um **Pull Request**
+
+---
+
+Feito com ❤️ por [fern-menezes](https://github.com/fern-menezes) ✨
+
